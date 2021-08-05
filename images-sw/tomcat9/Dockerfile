@@ -11,7 +11,7 @@
 # Base Version
 FROM metamagic/java:8
 
-MAINTAINER Araf Karsh Hamid <araf.karsh@metamagic.in>
+LABEL Araf Karsh Hamid <araf.karsh@metamagic.in>
 
 RUN mkdir /Softwares/tomcat/
 
@@ -24,3 +24,4 @@ EXPOSE 8080
 
 # Start Tomcat
 ENTRYPOINT ["/Softwares/tomcat/bin/catalina.sh", "run"]
+

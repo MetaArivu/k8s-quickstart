@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Install the App"
+kubectl apply  --filename apps/app-namespace.yaml
+kubectl apply  --filename apps/

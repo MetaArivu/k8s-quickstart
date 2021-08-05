@@ -1,1 +1,1 @@
-docker container run -d -p 80:80 metamagic/podshellapache2
+docker container run -d -p 80:80 metamagic/apache2

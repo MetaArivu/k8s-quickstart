@@ -1,26 +1,28 @@
 
-# Aliases You can add to your bash_profile 
+# Alias Help
+alias adock="alias | grep docker"
+alias akind="alias | grep kind"
+alias akube="alias | grep kube"
+alias agit="alias | grep git"
 
-# ------------------------------------------------------------------
 # Docker Commands
-# ------------------------------------------------------------------
 # docker container run  –it ubuntu /bin/bash
 alias dcr="docker container run -it"
 alias dcd="docker container run -d"
-#
+# 
 # ID=$(docker container run –d -i ubuntu)
 # docker container exec -it $ID /bin/bash
 alias dce="docker container exec -it"
-#
+# 
 # docker container start $ID
 alias dcstart="docker container start"
 #
 # Stop a Single Container based on ID (stored above)
-# docker container stop $ID
+# docker container stop $ID 
 # Stops all the containers
-# docker container stop $(docker container ls –aq)
+#docker container stop $(docker container ls –aq)
 alias dcstop="docker container stop"
-alias dcstopall="docker container stop $(docker container ls –aq)"
+# alias dcstopall="docker container stop $(docker container ls –aq)"
 #
 # List All the Containers
 alias dcl="docker container ls"
@@ -29,7 +31,7 @@ alias dcl="docker container ls"
 alias dcrm="docker container rm"
 #
 #  docker container rm $(docker container ls –aq)
-alias dcrmall="docker container rm $(docker container ls –aq)"
+# alias dcrmall="docker container rm $(docker container ls –aq)"
 #
 alias dp="docker push"
 alias dpull="docker pull"
@@ -37,9 +39,26 @@ alias dpull="docker pull"
 # docker rmi $(docker images | grep '^<none>' | tr -s " " | cut -d " " -f 3)
 alias dcrmi="docker rmi $(docker images | grep '^<none>' | tr -s " " | cut -d " " -f 3)"
 
-# ------------------------------------------------------------------
+# Kind K8s Cluster
+alias kccd="kind create cluster"
+alias kcc="kind create cluster --config"
+alias kk8s="fgrep server ~/.kube/config"
+alias kgc="kind get clusters"
+alias kci="kubectl cluster-info"
+
+# Crictl
+# Latest K8s Nodes contains CRI tools instead of Docker CLIs
+alias cps="crictl ps"
+
+# Multipass Ubuntu
+alias mp="multipass"
+alias mpl="multipass list"
+alias mpi="multipass info"
+alias mps="multipass shell"
+alias mpd="multipass delete"
+alias mpp="multipass purge"
+
 # Kubernetes Commands
-# ------------------------------------------------------------------
 
 # Kubernetes Minikube Commands
 alias mk="minikube "
@@ -60,7 +79,7 @@ alias mkd="minikube dashboard"
 alias maoh="minikube addons open heapster"
 
 # Kubernetes Basic Commands
-alias kc="kubectl"
+alias k="kubectl"
 alias kd="kubectl describe"
 alias ke="kubectl exec -it"
 alias kg="kubectl get"
@@ -100,17 +119,14 @@ alias krr="kubectl rollout resume deploy"
 alias kru="kubectl rollout undo deploy "
 
 # Kubernetes Developer Tools
-alias podshell="kubectl run -it podshell --image=metamagicglobal/podshell"
+alias podshell="kubectl run -it podshell --image=metamagic/podshell"
 alias podshella="kubectl -c podshell -it attach "
 
-# ------------------------------------------------------------------
 # Git Commands
-# ------------------------------------------------------------------
 alias g="git"
 alias gi="git init"
 alias ga="git add ."
 alias grao="git remote add origin"
 alias gc="git commit -a -m"
 alias gpo="git push -u origin --all"
-
 

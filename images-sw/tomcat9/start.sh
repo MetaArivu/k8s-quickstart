@@ -1,2 +1,2 @@
 #!/bin/bash
-docker container run -d -p 8080:8080 metamagic/podshelltomcat:9
+docker container run -d -p 8080:8080 metamagic/tomcat:9

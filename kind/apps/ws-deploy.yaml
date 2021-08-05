@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ws-deploy
+  namespace: sigma
+  labels:
+    app: ws-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ws-pod
+  template:
+    metadata:
+      labels:
+        app: ws-pod
+    spec:
+      containers:
+      - name: ws-container
+        image: metamagic/apache2
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 256Mi
+          requests:
+            cpu: 80m
+            memory: 128Mi
+

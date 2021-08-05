@@ -12,7 +12,7 @@ FROM alpine:latest
 
 MAINTAINER Araf Karsh Hamid <araf.karsh@metamagic.in>
 
-RUN apk update && apk add wget && apk add curl && apk add nano &&  apk add bash && apk add vim
+RUN apk update && apk add bash && apk add vim
 
 # Install SSL Certificates
 RUN apk add ca-certificates && rm -rf /var/cache/apk/*

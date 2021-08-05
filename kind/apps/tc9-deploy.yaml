@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tc9-deploy
+  namespace: sigma
+  labels:
+    app: tc9-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tc9-pod
+  template:
+    metadata:
+      labels:
+        app: tc9-pod
+    spec:
+      containers:
+      - name: tc9-container
+        image: metamagic/tomcat:9
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 250m
+            memory: 256Mi
+          requests:
+            cpu: 125m
+            memory: 128Mi
+

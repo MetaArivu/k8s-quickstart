@@ -6,6 +6,9 @@
 #
 # Arivu Services & Containers
 #
+# This container is deprecated based on Oracle License Change
+# on April 2019. Use OpenJDK for commercial activities.
+#
 # Version 0.1
 #################################################################
 # Base Version
