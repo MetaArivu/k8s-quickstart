@@ -8,6 +8,19 @@
 ```
 create-gamma-cluster
 ```
+Wait for the Ingress Controller to be ready
+
+2. Install the Apps
+```
+install-apps
+```
+
+### External Load Balancer, 2 Master & 3 Worker Node
+
+1. Create the Kubernetes cluster 
+```
+create-epsilon-cluster
+```
 ![Setup In Progress](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-cluster-setup.jpg)
 
 Wait for the Ingress Controller to be ready
@@ -18,19 +31,6 @@ Wait for the Ingress Controller to be ready
 install-apps
 ```
 ![Installed Apps - Ingres, Service & Pods](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-installed-apps.jpg)
-
-### External Load Balancer, 2 Master & 3 Worker Nodes
-
-1. Create the Kubernetes cluster 
-```
-create-epsilon-cluster
-```
-Wait for the Ingress Controller to be ready
-
-2. Install the Apps
-```
-install-apps
-```
 
 ## Whats Inside the Script
 
