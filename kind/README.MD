@@ -8,12 +8,16 @@
 ```
 create-gamma-cluster
 ```
+![Setup In Progress](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-cluster-setup.jpg)
+
 Wait for the Ingress Controller to be ready
+![Setup Status](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-cluster-setup-status.jpg)
 
 2. Install the Apps
 ```
 install-apps
 ```
+![Installed Apps - Ingres, Service & Pods](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-installed-apps.jpg)
 
 ### External Load Balancer, 2 Master & 3 Worker Nodes
 
