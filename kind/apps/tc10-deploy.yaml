@@ -10,14 +10,24 @@ spec:
   selector:
     matchLabels:
       app: tc10-pod
+  minReadySeconds: 5
+  strategy:
+    # Re-Create / Rolling Update
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1  
   template:
     metadata:
       labels:
         app: tc10-pod
+        version: "10"
+        release: stable
     spec:
       containers:
       - name: tc10-container
         image: metamagic/tomcat:10
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         resources:
