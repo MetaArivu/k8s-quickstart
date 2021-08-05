@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "Install the App"
+echo "Install the Apps"
 kubectl apply  --filename apps/app-namespace.yaml
 kubectl apply  --filename apps/

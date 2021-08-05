@@ -19,14 +19,14 @@ spec:
            name: ws-service
            port:
              number: 80
-      - path: /tc/v9
+      - path: /tc9
         pathType: Prefix
         backend:
           service:
            name: tc9-service
            port:
              number: 80
-      - path: /tc/v10
+      - path: /tc10
         pathType: Prefix
         backend:
           service:

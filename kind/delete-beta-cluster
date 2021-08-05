@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Delete Beta K8s Cluster"
+kind delete cluster --name beta-2
+
+

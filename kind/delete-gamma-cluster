@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Delete Gamma K8s Cluster"
+kind delete cluster --name gamma-3

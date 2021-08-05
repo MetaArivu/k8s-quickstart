@@ -24,5 +24,5 @@ Add the content of bash_profile to your .bash_profile
 
 ## KinD Clusters
 
-- clusters (Contain Cluster Configurations)
-- multiApps (Demo Service Infra Code)
+- Clusters (Contain Cluster Configurations)
+- Apps (Demo Service Infra Code)

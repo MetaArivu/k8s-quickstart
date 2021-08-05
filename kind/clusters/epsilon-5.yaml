@@ -1,9 +1,10 @@
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
-name: omega-5
+name: epsilon-5
 networking:
-  podSubnet: "10.244.0.0/16"
-  serviceSubnet: "10.96.0.0/12"
+  # Based on RFC 1918
+  podSubnet: "178.16.0.0/12"
+  serviceSubnet: "196.168.0.0/16"
 nodes:
 - role: control-plane
   kubeadmConfigPatches:

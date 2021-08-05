@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Delete the Apps"
+kubectl delete  --filename apps/
