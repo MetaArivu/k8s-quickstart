@@ -4,6 +4,8 @@
 - Kubernetes 
 - Kind
 
+![K8s Architecture](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/K8s-Arch.jpg)
+
 bash_profile contains shortcuts to various commmands for
 
 1. Docker
