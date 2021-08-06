@@ -1,5 +1,7 @@
 # Kubernetes Workshop
 
+Aug 6, 2021
+
 - Docker Containers (20.10)
 - Kind (0.11)
 - Kubernetes (1.21)
