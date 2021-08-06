@@ -1,2 +1,3 @@
 #!/bin/bash
-docker container run -it metamagic/alpine
+echo "docker container run -it --rm metamagic/alpine $1 $2"
+docker container run -it --rm metamagic/alpine $1 $2

@@ -10,7 +10,7 @@
 # Alpine Base Version
 FROM alpine:latest
 
-MAINTAINER Araf Karsh Hamid <araf.karsh@metamagic.in>
+LABEL author="Araf Karsh Hamid <araf.karsh@metamagic.in>"
 
 RUN apk update && apk add bash && apk add vim
 
@@ -34,4 +34,4 @@ WORKDIR /home/arivu
 # Run the Container as arivu only for SW Containers
 #USER arivu
 
-ENTRYPOINT /bin/bash
+CMD /bin/bash
