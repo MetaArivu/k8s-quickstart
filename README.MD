@@ -1,9 +1,9 @@
 # Kubernetes Workshop
 
-- Docker Containers
-- Kind
-- Kubernetes 
-- Istio
+- Docker Containers (20.10)
+- Kind (0.11)
+- Kubernetes (1.21)
+- Istio (1.10x)
 
 ## Kubernetes Architcture
 
