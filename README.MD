@@ -5,6 +5,10 @@
 - Kubernetes (1.21)
 - Istio (1.10x)
 
+## Server, Virtual Machines & Containers
+
+![Containers](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Servers-VMs-Containers.jpg)
+
 ## Kubernetes Architcture
 
 ![K8s Architecture](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/K8s-Arch.jpg)
