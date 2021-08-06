@@ -1,3 +1,5 @@
+# Web Server for the Micro Frontend
+# Deployment / Replicaset / Pod
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -10,6 +12,13 @@ spec:
   selector:
     matchLabels:
       app: ws-pod
+  minReadySeconds: 5
+  strategy:
+    # Re-Create / Rolling Update
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
   template:
     metadata:
       labels:
@@ -18,6 +27,7 @@ spec:
       containers:
       - name: ws-container
         image: metamagic/apache2
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
         resources:

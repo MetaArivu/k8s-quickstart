@@ -4,16 +4,17 @@
 - Kubernetes 
 - Kind
 
+## Kubernetes Architcture
+
 ![K8s Architecture](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/K8s-Arch.jpg)
 
-bash_profile contains shortcuts to various commmands for
+## Service Mesh
 
-1. Docker
-2. Kind
-3. Kubernetes (kubectl)
-4. Git
+![Service Mesh](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Istio-Components.jpg)
 
-Add the content of bash_profile to your .bash_profile
+##  Demo App Architecture
+
+![Shopping Portal](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/K8s-Demo-1.jpg)
 
 ## KinD Docker Images - Sofware (sw)
 
@@ -28,3 +29,18 @@ Add the content of bash_profile to your .bash_profile
 
 - Clusters (Contain Cluster Configurations)
 - Apps (Demo Service Infra Code)
+
+bash_profile contains shortcuts to various commmands for
+
+1. Docker
+2. Kind
+3. Kubernetes (kubectl)
+4. Git
+
+Add the content of bash_profile to your .bash_profile
+
+## Team
+
+![Team](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/K8s-Workshop-Team.jpg)
+
+Copyright 2021, Apach 2 License

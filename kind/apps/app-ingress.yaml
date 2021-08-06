@@ -1,3 +1,5 @@
+# API Gateway for Routing traffic to
+# respective Microservices
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -16,6 +18,7 @@ spec:
         pathType: Prefix
         backend:
           service:
+          # UI Service
            name: ws-service
            port:
              number: 80
@@ -23,6 +26,7 @@ spec:
         pathType: Prefix
         backend:
           service:
+          # Service 1
            name: tc9-service
            port:
              number: 80
@@ -30,6 +34,7 @@ spec:
         pathType: Prefix
         backend:
           service:
+          # Service 2
            name: tc10-service
            port:
              number: 80
