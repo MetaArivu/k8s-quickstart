@@ -1,8 +1,9 @@
 # Kubernetes Workshop
 
 - Docker Containers
-- Kubernetes 
 - Kind
+- Kubernetes 
+- Istio
 
 ## Kubernetes Architcture
 
