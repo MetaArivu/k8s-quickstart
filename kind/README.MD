@@ -84,7 +84,7 @@ Wait for the Ingress Controller to be ready
 ```
 install-apps
 ```
-3. Switch the Namespace in Kubernetes
+3. Switch the Namespace in Kubernetes (Done as part of install-apps)
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=sigma
 ```
@@ -99,7 +99,7 @@ kubectl get ing,svc,pods,hpa -o wide
 
 ### Create Multi Node Cluster with LB, 2 Masters & 1 Worker Node
 ```
-kind create cluster --config clusters/gama-3.yaml
+kind create cluster --config 1-clusters/gama-3.yaml
 ```
 
 ### Install NGINX Ingress Controller
@@ -109,13 +109,13 @@ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-n
 
 ### Deploy the Applications
 ```
-kubectl apply  --filename apps/app-namespace.yaml
-kubectl apply  --filename apps
+kubectl apply  --filename 2-apps-deploy-service-ingress/app-namespace.yaml
+kubectl apply  --filename 2-apps-deploy-service-ingress
 ```
 
 ### Create Multi Node Cluster with LB, 2 Masters & 3 Worker Nodes
 ```
-kind create cluster --config clusters/epsilon-5.yaml
+kind create cluster --config 1-clusters/epsilon-5.yaml
 ```
 
 ### Install NGINX Ingress Controller
@@ -125,8 +125,8 @@ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-n
 
 ### Deploy the Applications
 ```
-kubectl apply  --filename apps/app-namespace.yaml
-kubectl apply  --filename apps
+kubectl apply  --filename 2-apps-deploy-service-ingress/app-namespace.yaml
+kubectl apply  --filename 2-apps-deploy-service-ingress
 ```
 
 ## KinD commands
@@ -152,8 +152,7 @@ $ kubectl get nodes
 $ kind load 
 
 ### Create Multi Node Cluster from Config File
-$ kind create cluster --config multi-app.yaml
+$ kind create cluster --config 1-clusters/alpha-1.yaml
 
-### To See K8s Cluster nodes
-$ kubectl get nodes
+
 
