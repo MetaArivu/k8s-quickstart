@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Delete the Apps"
-kubectl delete  --filename apps/
+kubectl delete  --filename 2-apps-deploy-service-ingress/

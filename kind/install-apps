@@ -1,5 +1,14 @@
 #!/bin/bash
 
-echo "Install the Apps"
-kubectl apply  --filename apps/app-namespace.yaml
-kubectl apply  --filename apps/
+echo "Install the Apps: Pods / Replica Set / Deploy / Service / Ingress"
+kubectl apply  --filename 2-apps-deploy-service-ingress/app-namespace.yaml
+kubectl apply  --filename 2-apps-deploy-service-ingress/
+echo "...."
+echo "Switch the Namespace to Sigma"
+kubectl config set-context $(kubectl config current-context) --namespace=sigma
+
+echo "........"
+echo "Show Ingress, Services, Pods, HPA"
+kubectl get ing,svc,pods,hpa -o wide
+echo "............ Setup Complete!"
+echo

@@ -23,7 +23,7 @@ Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
 
 For More options read KinD Setup docs [https://kind.sigs.k8s.io/docs/user/quick-start/](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
-### kubectl
+## Install kubectl
 
 The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs. For more information including a complete list of kubectl operations, see the [kubectl reference documentation.](https://kubernetes.io/docs/reference/kubectl/)
 
@@ -84,7 +84,16 @@ Wait for the Ingress Controller to be ready
 ```
 install-apps
 ```
+3. Switch the Namespace in Kubernetes
+```
+kubectl config set-context $(kubectl config current-context) --namespace=sigma
+```
+4. Show Ingress, Services, Pods, HPA in Sigma namespace
+```
+kubectl get ing,svc,pods,hpa -o wide
+```
 ![Installed Apps - Ingres, Service & Pods](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-installed-apps.jpg)
+
 
 ## Whats Inside the Script
 

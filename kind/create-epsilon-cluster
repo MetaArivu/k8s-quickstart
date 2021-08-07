@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Create Multi Node Cluster with LB, 2 Masters, and 3 Worker Nodes"
-kind create cluster --config clusters/epsilon-5.yaml
+kind create cluster --config 1-clusters/epsilon-5.yaml
 
 echo "Install NGINX Ingress Controller"
 echo "kubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml"
