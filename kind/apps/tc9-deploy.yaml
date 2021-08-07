@@ -32,6 +32,7 @@ spec:
         ports:
         - containerPort: 8080
         resources:
+        # QoS : Burstable
           limits:
             cpu: 500m
             memory: 256Mi

@@ -1,2 +1,3 @@
 #!/bin/bash
-docker container run -d -p 8010:8080 metamagic/tomcat:10
+echo "docker container run --name tomcat-10 -d -p 8010:8080 metamagic/tomcat:10"
+docker container run --name tomcat-10 -d -p 8010:8080 metamagic/tomcat:10

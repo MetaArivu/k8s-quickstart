@@ -19,6 +19,10 @@ RUN mkdir /Softwares/tomcat/
 COPY --chown=arivu:arivu tc10 /Softwares/tomcat/
 RUN chmod 750 /Softwares/tomcat/bin/*
 
+# COPY your web app /Softwares/tomcat/webapps
+# Ideally your webapp Dockerfile shld be copied
+# separate from Tomcat Dockerfile
+
 # Expose Tomcat port
 EXPOSE 8080
 

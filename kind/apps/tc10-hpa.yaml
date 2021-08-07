@@ -10,8 +10,8 @@ spec:
     apiVersion:  apps/v1beta2
     kind: Deployment
     name: tc10-deploy
-  minReplicas: 1
-  maxReplicas: 10
+  minReplicas: 4
+  maxReplicas: 100
   metrics:
   - type: Resource
     resource:
