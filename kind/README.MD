@@ -1,6 +1,60 @@
 # Multi Node Kubernetes Clusters using KinD
+Kind is a tool for running local Kubernetes clusters using Docker container “nodes”. Kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
-##  Quick Start 
+## Install KinD 
+
+### Linux 
+```
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
+chmod +x ./kind
+mv ./kind /some-dir-in-your-PATH/kind
+```
+
+### Mac OS via Homebrew
+```
+brew install kind
+```
+
+### Windows
+```
+curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.11.1/kind-windows-amd64
+Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
+```
+
+For More options read KinD Setup docs ![https://kind.sigs.k8s.io/docs/user/quick-start/](https://kind.sigs.k8s.io/docs/user/quick-start/)
+
+### kubectl
+
+The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs. For more information including a complete list of kubectl operations, see the ![kubectl reference documentation.](https://kubernetes.io/docs/reference/kubectl/)
+
+kubectl is installable on a variety of Linux platforms, macOS and Windows. Find your preferred operating system below.
+
+![Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+![Install kubectl on macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+![Install kubectl on Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
+
+##  Create Kubernetes Cluster 
+
+### Simple Cluster
+
+1. To create a simple cluster using commmand line option
+```
+kind create cluster
+```
+![Create Simple Cluster](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Kind-Simple-Cluster-1.jpg)
+
+2. To Check the containers created by docker for the Simple Cluster
+```
+docker container ls
+```
+![Cluster Info](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Kind-Simple-Cluster-2.jpg)
+
+3. Use Kubectl to check the worker nodes.
+```
+kubectl get nodes
+```
+![Cluster Info](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Kind-Simple-Cluster-3.jpg)
+
 
 ### External Load Balancer, 2 Master & 1 Worker Node
 
