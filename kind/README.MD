@@ -35,7 +35,7 @@ kubectl is installable on a variety of Linux platforms, macOS and Windows. Find 
 
 ##  Create Kubernetes Cluster 
 
-### Simple Cluster
+### Simple Cluster (Default Cluster : Name = kind)
 
 1. To create a simple cluster using commmand line option
 ```
@@ -60,35 +60,50 @@ kubectl get nodes
 
 1. Create the Kubernetes cluster 
 ```
-create-gamma-cluster
+cd k8s-workshop/kind/
+```
+
+```
+ch1-create-gamma-cluster
 ```
 Wait for the Ingress Controller to be ready
 
-2. Install the Apps
+2. Install the (Sigma) Apps
 ```
-install-apps
+ch3-sigma-install-apps
 ```
-
+3. Switch the Namespace in Kubernetes (Done as part of sigma-install-apps)
+```
+kubectl config set-context $(kubectl config current-context) --namespace=sigma
+```
+4. Show Ingress, Services, Pods, HPA in Sigma namespace (Done as part of sigma-install-apps)
+```
+kubectl get ing,svc,pods,hpa -o wide
+```
 ### External Load Balancer, 2 Master & 3 Worker Node
 
 1. Create the Kubernetes cluster 
 ```
-create-epsilon-cluster
+cd k8s-workshop/kind/
+```
+
+```
+ch1-create-epsilon-cluster
 ```
 ![Setup In Progress](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-cluster-setup.jpg)
 
 Wait for the Ingress Controller to be ready
 ![Setup Status](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-cluster-setup-status.jpg)
 
-2. Install the Apps
+2. Install the (Sigma) Apps
 ```
-install-apps
+ch3-sigma-install-apps
 ```
-3. Switch the Namespace in Kubernetes (Done as part of install-apps)
+3. Switch the Namespace in Kubernetes (Done as part of sigma-install-apps)
 ```
 kubectl config set-context $(kubectl config current-context) --namespace=sigma
 ```
-4. Show Ingress, Services, Pods, HPA in Sigma namespace
+4. Show Ingress, Services, Pods, HPA in Sigma namespace (Done as part of sigma-install-apps)
 ```
 kubectl get ing,svc,pods,hpa -o wide
 ```
@@ -98,6 +113,10 @@ kubectl get ing,svc,pods,hpa -o wide
 ## Whats Inside the Script
 
 ### Create Multi Node Cluster with LB, 2 Masters & 1 Worker Node
+```
+cd k8s-workshop/kind/
+```
+
 ```
 kind create cluster --config 1-clusters/gama-3.yaml
 ```
@@ -109,8 +128,9 @@ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-n
 
 ### Deploy the Applications
 ```
-kubectl apply  --filename 2-apps-deploy-service-ingress/app-namespace.yaml
-kubectl apply  --filename 2-apps-deploy-service-ingress
+cd k8s-workshop/kind/
+kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
+kubectl apply  --filename 3-apps-deploy-service-ingress
 ```
 
 ### Create Multi Node Cluster with LB, 2 Masters & 3 Worker Nodes
@@ -125,8 +145,9 @@ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-n
 
 ### Deploy the Applications
 ```
-kubectl apply  --filename 2-apps-deploy-service-ingress/app-namespace.yaml
-kubectl apply  --filename 2-apps-deploy-service-ingress
+cd k8s-workshop/kind/
+kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
+kubectl apply  --filename 3-apps-deploy-service-ingress
 ```
 
 ## KinD commands
@@ -151,8 +172,5 @@ $ kubectl get nodes
 ### Load images into the node
 $ kind load 
 
-### Create Multi Node Cluster from Config File
+### Create Single Node Cluster from Config File
 $ kind create cluster --config 1-clusters/alpha-1.yaml
-
-
-

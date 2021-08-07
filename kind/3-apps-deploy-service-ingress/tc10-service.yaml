@@ -3,11 +3,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  # Service Name: Ex. Order Service
-  name: tc9-service
+  # Service Name: Ex. Payment Service
+  name: tc10-service
   namespace: sigma
   labels:
-    app: tc9-service
+    app: tc10-service
 spec:
   type: ClusterIP
   ports:
@@ -17,5 +17,5 @@ spec:
     name: http
   selector:
     # Instance Labels
-    # Order Service Instances
-    app: tc9-pod
+    # Ex. Payment Service Instances
+    app: tc10-pod

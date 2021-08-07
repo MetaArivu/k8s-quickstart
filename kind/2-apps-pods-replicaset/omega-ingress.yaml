@@ -1,0 +1,34 @@
+# API Gateway for Routing traffic to
+# respective Microservices
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: omega-gw-ingress
+  namespace: omega
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  # Add TLS 
+  rules:
+  - host: localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            # Service Name: Ex. Catalogue Service
+            name: tc9-n-service
+            port:
+              number: 80
+      - path: /10
+        pathType: Prefix
+        backend:
+          service:
+            # Service Name: Ex. Product Review Service
+            name: tc10-n-service
+            port:
+              number: 80
