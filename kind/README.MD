@@ -21,17 +21,17 @@ curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.11.1/kind-win
 Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
 ```
 
-For More options read KinD Setup docs ![https://kind.sigs.k8s.io/docs/user/quick-start/](https://kind.sigs.k8s.io/docs/user/quick-start/)
+For More options read KinD Setup docs [https://kind.sigs.k8s.io/docs/user/quick-start/](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
 ### kubectl
 
-The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs. For more information including a complete list of kubectl operations, see the ![kubectl reference documentation.](https://kubernetes.io/docs/reference/kubectl/)
+The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs. For more information including a complete list of kubectl operations, see the [kubectl reference documentation.](https://kubernetes.io/docs/reference/kubectl/)
 
 kubectl is installable on a variety of Linux platforms, macOS and Windows. Find your preferred operating system below.
 
-[Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
-[Install kubectl on macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
-[Install kubectl on Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
+- [Install kubectl on Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+- [Install kubectl on macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+- [Install kubectl on Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/)
 
 ##  Create Kubernetes Cluster 
 
