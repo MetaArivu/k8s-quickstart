@@ -12,6 +12,8 @@ spec:
   replicas: 3
   selector:
     matchLabels:
+      # Matching the labels from Pod Meta Data
+      # Multiple labels can be used
       app: tc9-pod
   minReadySeconds: 5
   strategy:
@@ -24,10 +26,13 @@ spec:
     metadata:
       labels:
         app: tc9-pod
+        version: "9"
+        release: stable
     spec:
       containers:
       - name: tc9-container
         image: metamagic/tomcat:9
+        # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

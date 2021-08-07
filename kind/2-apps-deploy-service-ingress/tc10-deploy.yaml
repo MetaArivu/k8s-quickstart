@@ -11,6 +11,8 @@ spec:
   replicas: 2
   selector:
     matchLabels:
+      # Matching the labels from Pod Meta Data
+      # Multiple labels can be used
       app: tc10-pod
   minReadySeconds: 5
   strategy:
@@ -29,11 +31,15 @@ spec:
       containers:
       - name: tc10-container
         image: metamagic/tomcat:10
+        # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         resources:
         # QoS Guranteed
+        # Pod will not be launched if the Hardware 
+        # resource is not available
+        # To check the run the command kubectl describe pod pod-name
           limits:
             cpu: 500m
             memory: 256Mi
