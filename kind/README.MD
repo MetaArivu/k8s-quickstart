@@ -4,20 +4,20 @@ Kind is a tool for running local Kubernetes clusters using Docker container “n
 ## Install KinD 
 
 ### Linux 
-```
-curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
-chmod +x ./kind
-mv ./kind /some-dir-in-your-PATH/kind
+```shell
+$ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.11.1/kind-linux-amd64
+$ chmod +x ./kind
+$ mv ./kind /some-dir-in-your-PATH/kind
 ```
 
 ### Mac OS via Homebrew
-```
-brew install kind
+```shell
+$ brew install kind
 ```
 
 ### Windows
-```
-curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.11.1/kind-windows-amd64
+```bash
+c:\> curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.11.1/kind-windows-amd64
 Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
 ```
 
@@ -39,19 +39,19 @@ kubectl is installable on a variety of Linux platforms, macOS and Windows. Find 
 
 1. To create a simple cluster using commmand line option
 ```
-kind create cluster
+$ kind create cluster
 ```
 ![Create Simple Cluster](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Kind-Simple-Cluster-1.jpg)
 
 2. To Check the containers created by docker for the Simple Cluster
 ```
-docker container ls
+$ docker container ls
 ```
 ![Cluster Info](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Kind-Simple-Cluster-2.jpg)
 
 3. Use Kubectl to check the worker nodes.
 ```
-kubectl get nodes
+$ kubectl get nodes
 ```
 ![Cluster Info](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Kind-Simple-Cluster-3.jpg)
 
@@ -60,35 +60,35 @@ kubectl get nodes
 
 1. Create the Kubernetes cluster 
 ```
-cd k8s-workshop/kind/
+$ cd k8s-workshop/kind/
 ```
 
 ```
-ch1-create-gamma-cluster
+$ ch1-create-gamma-cluster
 ```
 Wait for the Ingress Controller to be ready
 
 2. Install the (Sigma) Apps
 ```
-ch3-sigma-install-apps
+$ ch3-sigma-install-apps
 ```
 3. Switch the Namespace in Kubernetes (Done as part of sigma-install-apps)
 ```
-kubectl config set-context $(kubectl config current-context) --namespace=sigma
+$ kubectl config set-context $(kubectl config current-context) --namespace=sigma
 ```
 4. Show Ingress, Services, Pods, HPA in Sigma namespace (Done as part of sigma-install-apps)
 ```
-kubectl get ing,svc,pods,hpa -o wide
+$ kubectl get ing,svc,pods,hpa -o wide
 ```
 ### External Load Balancer, 2 Master & 3 Worker Node
 
 1. Create the Kubernetes cluster 
 ```
-cd k8s-workshop/kind/
+$ cd k8s-workshop/kind/
 ```
 
 ```
-ch1-create-epsilon-cluster
+$ ch1-create-epsilon-cluster
 ```
 ![Setup In Progress](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-cluster-setup.jpg)
 
@@ -97,15 +97,15 @@ Wait for the Ingress Controller to be ready
 
 2. Install the (Sigma) Apps
 ```
-ch3-sigma-install-apps
+$ ch3-sigma-install-apps
 ```
 3. Switch the Namespace in Kubernetes (Done as part of sigma-install-apps)
 ```
-kubectl config set-context $(kubectl config current-context) --namespace=sigma
+$ kubectl config set-context $(kubectl config current-context) --namespace=sigma
 ```
 4. Show Ingress, Services, Pods, HPA in Sigma namespace (Done as part of sigma-install-apps)
 ```
-kubectl get ing,svc,pods,hpa -o wide
+$ kubectl get ing,svc,pods,hpa -o wide
 ```
 ![Installed Apps - Ingres, Service & Pods](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/k8s-installed-apps.jpg)
 
@@ -114,40 +114,40 @@ kubectl get ing,svc,pods,hpa -o wide
 
 ### Create Multi Node Cluster with LB, 2 Masters & 1 Worker Node
 ```
-cd k8s-workshop/kind/
+$ cd k8s-workshop/kind/
 ```
 
 ```
-kind create cluster --config 1-clusters/gama-3.yaml
+$ kind create cluster --config 1-clusters/gama-3.yaml
 ```
 
 ### Install NGINX Ingress Controller
 ```
-kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+$ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
 ```
 
 ### Deploy the Applications
 ```
-cd k8s-workshop/kind/
-kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
-kubectl apply  --filename 3-apps-deploy-service-ingress
+$ cd k8s-workshop/kind/
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress
 ```
 
 ### Create Multi Node Cluster with LB, 2 Masters & 3 Worker Nodes
 ```
-kind create cluster --config 1-clusters/epsilon-5.yaml
+$ kind create cluster --config 1-clusters/epsilon-5.yaml
 ```
 
 ### Install NGINX Ingress Controller
 ```
-kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+$ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
 ```
 
 ### Deploy the Applications
 ```
-cd k8s-workshop/kind/
-kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
-kubectl apply  --filename 3-apps-deploy-service-ingress
+$ cd k8s-workshop/kind/
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress
 ```
 
 ## KinD commands
