@@ -9,9 +9,13 @@ metadata:
   labels:
     app: tc10-n-service
 spec:
+  # Type Cluster IP, Load Balancer, Node Port etc.
+  # Cluster IP is Automatically assigned by K8s
   type: ClusterIP
   ports:
+  # Port Exposed outside Pod
   - port: 80
+    # Container Port
     targetPort: 8080
     protocol: TCP
     name: http

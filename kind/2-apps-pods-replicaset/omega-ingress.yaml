@@ -13,6 +13,7 @@ metadata:
 spec:
   # Add TLS 
   rules:
+  # API Gateway Routing Rules
   - host: localhost
     http:
       paths:
