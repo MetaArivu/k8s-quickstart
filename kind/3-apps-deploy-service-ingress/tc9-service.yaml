@@ -4,10 +4,10 @@ apiVersion: v1
 kind: Service
 metadata:
   # Service Name: Ex. Order Service
-  name: tc9-service
+  name: tc89-service
   namespace: sigma
   labels:
-    app: tc9-service
+    app: tc89-service
 spec:
   type: ClusterIP
   ports:
@@ -18,4 +18,6 @@ spec:
   selector:
     # Instance Labels
     # Ex. Order Service Instances
-    app: tc9-pod
+    app: tc89-pod
+    release: stable
+    organization: Apache

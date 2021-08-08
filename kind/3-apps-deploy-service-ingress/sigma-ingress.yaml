@@ -23,15 +23,23 @@ spec:
            name: ws-service
            port:
              number: 80
-      - path: /tc9
+      - path: /server?tc=8
         pathType: Prefix
         backend:
           service:
           # Service 1
-           name: tc9-service
+           name: tc89-service
            port:
              number: 80
-      - path: /tc10
+      - path: /server?tc=9
+        pathType: Prefix
+        backend:
+          service:
+          # Service 1
+           name: tc89-service
+           port:
+             number: 80
+      - path: /server?tc=10
         pathType: Prefix
         backend:
           service:

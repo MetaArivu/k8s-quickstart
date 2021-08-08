@@ -1,4 +1,3 @@
-
 # ReplicaSet Definition (ONLY for LEARNING PURPOSE)
 # NOT TO BE USED IN PRODUCTION ENVIRONMENT
 # Use Deployment (Kind) instead of ReplicaSet

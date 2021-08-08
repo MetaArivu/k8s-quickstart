@@ -1,0 +1,48 @@
+
+# App Server for the Microservice
+# Deployment / Replicaset / Pod
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tc89-deploy
+  namespace: sigma
+  labels:
+    app: tc89-deploy
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      # Matching the labels from Pod Meta Data
+      # Multiple labels can be used
+      app: tc89-pod
+  minReadySeconds: 5
+  strategy:
+    # Re-Create / Rolling Update
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 2
+      maxSurge: 2
+  template:
+    metadata:
+      labels:
+        app: tc89-pod
+        version: "9.0.52"
+        release: stable
+        organization: Apache
+    spec:
+      containers:
+      - name: tc89-container
+        image: metamagic/tomcat:9
+        # Use Always ONLY for Development purpose.
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        resources:
+        # QoS : Burstable
+          limits:
+            cpu: 250m
+            memory: 128Mi
+          requests:
+            cpu: 125m
+            memory: 64Mi
+
