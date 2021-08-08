@@ -47,3 +47,11 @@ spec:
            name: tc10-service
            port:
              number: 80
+      - path: /docs
+        pathType: Prefix
+        backend:
+          service:
+          # Service 3: Order Service
+           name: tc10-service
+           port:
+             number: 80

@@ -1,3 +1,0 @@
-[Wed Sep 26 06:28:10.602427 2018] [mpm_prefork:notice] [pid 42] AH00163: Apache/2.4.33 (Unix) configured -- resuming normal operations
-[Wed Sep 26 06:28:10.602764 2018] [core:notice] [pid 42] AH00094: Command line: '/usr/sbin/httpd -D NO_DETACH -f /web/config/httpd.conf'
-[Wed Sep 26 06:33:52.705187 2018] [mpm_prefork:notice] [pid 42] AH00169: caught SIGTERM, shutting down

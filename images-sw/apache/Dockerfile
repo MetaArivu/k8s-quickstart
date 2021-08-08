@@ -10,7 +10,7 @@
 #################################################################
 FROM metamagic/alpine:latest
 
-MAINTAINER Araf Karsh Hamid <araf.karsh@metamagic.in>
+LABEL author="Araf Karsh Hamid <araf.karsh@metamagic.in>"
 
 RUN apk add --no-cache apache2 && \
            mkdir -p /run/apache2 
