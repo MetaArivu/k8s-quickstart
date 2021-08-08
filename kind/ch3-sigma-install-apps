@@ -8,7 +8,7 @@ kubectl apply  --filename 3-apps-deploy-service-ingress/ws-deploy.yaml
 kubectl apply  --filename 3-apps-deploy-service-ingress/ws-service.yaml
 kubectl apply  --filename 3-apps-deploy-service-ingress/tc8-deploy.yaml
 kubectl apply  --filename 3-apps-deploy-service-ingress/tc8-service.yaml
-kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-deploy-v1.yaml
+kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-deploy-v1.yaml --record
 kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-service.yaml
 kubectl apply  --filename 3-apps-deploy-service-ingress/tc10-deploy.yaml
 kubectl apply  --filename 3-apps-deploy-service-ingress/tc10-service.yaml

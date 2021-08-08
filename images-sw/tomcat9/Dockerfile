@@ -11,12 +11,12 @@
 # Base Version
 FROM metamagic/java:8
 
-LABEL Araf Karsh Hamid <araf.karsh@metamagic.in>
+LABEL author="Araf Karsh Hamid <araf.karsh@metamagic.in>"
 
 RUN mkdir /Softwares/tomcat/
 
 # Copy Tomcat (Install)
-COPY --chown=arivu:arivu tc9 /Softwares/tomcat/
+COPY --chown=arivu:arivu tc9.0.52 /Softwares/tomcat/
 RUN chmod 750 /Softwares/tomcat/bin/*
 
 # Expose Tomcat port

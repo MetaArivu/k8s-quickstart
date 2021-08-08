@@ -4,10 +4,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tc89-deploy
+  name: tc9-deploy
   namespace: sigma
   labels:
-    app: tc89-deploy
+    app: tc9-deploy
 spec:
   replicas: 2
   selector:
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: tc9-container
-        image: metamagic/tomcat:9
+        image: metamagic/tomcat:9.0.52
         # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
