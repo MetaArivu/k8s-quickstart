@@ -26,8 +26,8 @@ spec:
     spec:
       containers:
       - name: ws-container
-        image: metamagic/apache2
-        imagePullPolicy: IfNotPresent
+        image: metamagic/kind
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 

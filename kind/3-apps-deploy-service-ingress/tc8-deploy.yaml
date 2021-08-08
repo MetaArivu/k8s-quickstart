@@ -4,17 +4,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tc89-deploy
+  name: tc8-deploy
   namespace: sigma
   labels:
-    app: tc89-deploy
+    app: tc8-deploy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       # Matching the labels from Pod Meta Data
       # Multiple labels can be used
-      app: tc9-pod
+      app: tc8-pod
   minReadySeconds: 5
   strategy:
     # Re-Create / Rolling Update
@@ -25,14 +25,14 @@ spec:
   template:
     metadata:
       labels:
-        app: tc9-pod
-        version: "9.0.52"
+        app: tc8-pod
+        version: "8.5.69"
         release: stable
         organization: Apache
     spec:
       containers:
-      - name: tc9-container
-        image: metamagic/tomcat:9
+      - name: tc8-container
+        image: metamagic/tomcat:8
         # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
@@ -41,8 +41,8 @@ spec:
         # QoS : Burstable
           limits:
             cpu: 500m
-            memory: 128Mi
+            memory: 256Mi
           requests:
             cpu: 256m
-            memory: 64Mi
+            memory: 128Mi
 
