@@ -6,6 +6,7 @@ networking:
   podSubnet: "178.16.0.0/12"
   serviceSubnet: "196.168.0.0/16"
 nodes:
+# Single Node Cluster
 - role: control-plane
   kubeadmConfigPatches:
   - |
