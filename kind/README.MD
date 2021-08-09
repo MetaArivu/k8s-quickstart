@@ -130,7 +130,15 @@ $ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress
 ```
 $ cd k8s-workshop/kind/
 $ kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
-$ kubectl apply  --filename 3-apps-deploy-service-ingress
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-ingress.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/ws-deploy.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/ws-service.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc8-deploy.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc8-service.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-deploy-v1.yaml --record
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-service.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc10-deploy.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc10-service.yaml
 ```
 
 ### Create Multi Node Cluster with LB, 2 Masters & 3 Worker Nodes
@@ -147,7 +155,15 @@ $ kkubectl apply --filename https://raw.githubusercontent.com/kubernetes/ingress
 ```
 $ cd k8s-workshop/kind/
 $ kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-namespace.yaml
-$ kubectl apply  --filename 3-apps-deploy-service-ingress
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/sigma-ingress.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/ws-deploy.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/ws-service.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc8-deploy.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc8-service.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-deploy-v1.yaml --record
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc9-service.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc10-deploy.yaml
+$ kubectl apply  --filename 3-apps-deploy-service-ingress/tc10-service.yaml
 ```
 
 ## KinD commands
