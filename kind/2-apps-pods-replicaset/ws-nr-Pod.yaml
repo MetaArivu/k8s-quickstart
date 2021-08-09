@@ -4,16 +4,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: tc10-n-pod
+  name: ws-n-pod
   namespace: omega
   labels:
     # Labels used for Selection in Service
-    app: tc10-n-pod
+    app: ws-n-pod
     release: stable
 spec:
   containers:
-  - name: tc10-n-container
-    image: metamagic/tomcat:10
+  - name: ws-n-container
+    image: metamagic/omega
     # Use Always ONLY for Development purpose.
     imagePullPolicy: IfNotPresent
     ports:

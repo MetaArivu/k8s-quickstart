@@ -22,14 +22,14 @@ spec:
         backend:
           service:
             # Service Name: Ex. Catalogue Service
-            name: tc9-n-service
+            name: ws-n-service
             port:
               number: 80
-      - path: /10
+      - path: /tomcat9
         pathType: Prefix
         backend:
           service:
             # Service Name: Ex. Product Review Service
-            name: tc10-n-service
+            name: tc9-n-service
             port:
               number: 80
