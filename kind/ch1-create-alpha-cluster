@@ -2,6 +2,7 @@
 
 echo "Chapter 1: Create Kubernetes Cluster"
 echo "1.1 Create Single Node Cluster"
+echo "KinD Version >> "`kind version`
 kind create cluster --config 1-clusters/alpha-1.yaml
 
 echo "1.2 Install NGINX Ingress Controller"
