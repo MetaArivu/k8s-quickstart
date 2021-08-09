@@ -15,7 +15,7 @@ spec:
   - name: ws-n-container
     image: metamagic/omega
     # Use Always ONLY for Development purpose.
-    imagePullPolicy: IfNotPresent
+    imagePullPolicy: Always
     ports:
     # Port of your application Defined in the Container
     - containerPort: 80
