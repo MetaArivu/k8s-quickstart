@@ -14,8 +14,7 @@ spec:
   # Add TLS 
   rules:
   # API Gateway Routing Rules
-  - host: localhost
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
@@ -26,7 +25,7 @@ spec:
             port:
               number: 80
       - path: /tomcat9
-        pathType: Prefix
+        pathType: Exact
         backend:
           service:
             # Service Name: Ex. Product Review Service

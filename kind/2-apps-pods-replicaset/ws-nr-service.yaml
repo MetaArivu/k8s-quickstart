@@ -16,7 +16,7 @@ spec:
   # Port Exposed outside Pod
   - port: 80
     # Container Port
-    targetPort: 8080
+    targetPort: 80
     protocol: TCP
     name: http
   selector:

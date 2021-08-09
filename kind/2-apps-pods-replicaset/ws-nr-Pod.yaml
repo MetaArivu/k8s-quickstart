@@ -18,7 +18,7 @@ spec:
     imagePullPolicy: IfNotPresent
     ports:
     # Port of your application Defined in the Container
-    - containerPort: 8080
+    - containerPort: 80
     resources:
     # QoS : Burstable
       limits:
