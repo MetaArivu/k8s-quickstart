@@ -68,7 +68,7 @@ These services will be updated with more functionality by end of Aug 2021.
 - Clusters (Contain Cluster Configurations)
 - Apps (Demo Service Infra Code)
 
-bash_profile contains shortcuts to various commmands for
+<a href="https://github.com/MetaArivu/k8s-workshop/blob/master/bash_profile">bash_profile</a> contains shortcuts to various commmands for
 
 1. Docker
 2. Kind

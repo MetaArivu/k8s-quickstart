@@ -13,7 +13,7 @@ spec:
   # Min Replica will overwrite Deployment replicas with
   # if minReplicas > replicas (in Deployment)
   # For Ex. order-deploy.yaml replicas = 2
-  minReplicas: 2
+  minReplicas: 3
   maxReplicas: 10
   metrics:
   - type: Resource

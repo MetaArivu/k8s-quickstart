@@ -8,7 +8,7 @@ metadata:
   labels:
     app: payment-deploy
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       # Matching the labels from Pod Meta Data
