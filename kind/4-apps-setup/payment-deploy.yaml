@@ -8,7 +8,7 @@ metadata:
   labels:
     app: payment-deploy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       # Matching the labels from Pod Meta Data
@@ -42,9 +42,9 @@ spec:
         # resource is not available
         # To check the run the command kubectl describe pod pod-name
           limits:
-            cpu: 500m
-            memory: 256Mi
+            cpu: 756m
+            memory: 756Mi
           requests:
             cpu: 500m
-            memory: 256Mi
+            memory: 512Mi
 

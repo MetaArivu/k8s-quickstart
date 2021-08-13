@@ -9,7 +9,7 @@ metadata:
   labels:
     app: order-deploy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       # Matching the labels from Pod Meta Data
@@ -40,9 +40,9 @@ spec:
         resources:
         # QoS : Burstable
           limits:
-            cpu: 500m
-            memory: 128Mi
+            cpu: 756m
+            memory: 756Mi
           requests:
-            cpu: 256m
-            memory: 64Mi
+            cpu: 500m
+            memory: 512Mi
 

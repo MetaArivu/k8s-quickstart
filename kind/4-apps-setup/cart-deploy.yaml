@@ -40,9 +40,9 @@ spec:
         resources:
         # QoS : Burstable
           limits:
-            cpu: 500m
-            memory: 256Mi
+            cpu: 756m
+            memory: 756Mi
           requests:
-            cpu: 256m
-            memory: 128Mi
+            cpu: 500m
+            memory: 512Mi
 

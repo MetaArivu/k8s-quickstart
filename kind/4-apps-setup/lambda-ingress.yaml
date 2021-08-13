@@ -8,6 +8,7 @@ metadata:
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/service-upstream: "true"
     ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -23,7 +24,7 @@ spec:
            name: ws-service
            port:
              number: 80
-      - path: /api/v1/cart/*
+      - path: /api/v1/cart/
         pathType: Prefix
         backend:
           service:
@@ -31,7 +32,7 @@ spec:
            name: cart-service
            port:
              number: 80
-      - path: /api/v1/order/
+      - path: /api/v1/order/*
         pathType: Prefix
         backend:
           service:
@@ -39,7 +40,7 @@ spec:
            name: order-service
            port:
              number: 80
-      - path: /api/v1/payments/
+      - path: /api/v1/payments/*
         pathType: Prefix
         backend:
           service:
