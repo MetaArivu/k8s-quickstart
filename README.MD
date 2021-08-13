@@ -15,7 +15,7 @@ Please click <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind
 
 1. Chapter 4 - Lambda App (nothing to do with Amazon Lambda) with Spring Boot Apps (Cart, Order, Payment)
 2. Checkout the <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind">Kind directory</a> for the details.
-3. For Docker, Kind, Kubectl command short cuts checkout the <a hre="https://github.com/MetaArivu/k8s-workshop/blob/master/bash_profile">bash_profile</a> file.
+3. For Docker, Kind, Kubectl command short cuts checkout the <a href="https://github.com/MetaArivu/k8s-workshop/blob/master/bash_profile">bash_profile</a> file.
 
 ## Microservices Template
 
