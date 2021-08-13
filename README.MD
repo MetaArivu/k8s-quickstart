@@ -30,6 +30,14 @@ Microservice Template gives you a
 
 Checkout the <a href="https://github.com/MetaArivu/microservice-template">repository</a> to Quickstart on Springboot based Dockerized Microservices.
 
+Mock Services built using Microservices Template Code base. These services have REST Endpoint implementations.
+
+1. <a href="https://github.com/MetaArivu/mock-cart">Cart Service</a>
+2. <a href="https://github.com/MetaArivu/mock-order">Order Service</a>
+3. <a href="https://github.com/MetaArivu/mock-payment">Payment Service</a>
+
+These services will be updated with more functionality by end of Aug 2021.
+
 ## Server, Virtual Machines & Containers
 
 ![Containers](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Servers-VMs-Containers.jpg)
