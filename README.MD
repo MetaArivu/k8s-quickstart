@@ -17,6 +17,19 @@ Please click <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind
 2. Checkout the <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind">Kind directory</a> for the details.
 3. For Docker, Kind, Kubectl command short cuts checkout the bash_profile file.
 
+## Microservices Template
+
+Microservice Template gives you a
+
+1. SpringBoot App template with
+2. Open API 3 Ex,
+3. Spring Actuator,
+4. Spring Sleuth and
+5. Pom file with (SpringBoot) Fat and Thin (Maven) jar file creation and
+6. Dockerfile for containerisation.
+
+Checkout the <a href="https://github.com/MetaArivu/microservice-template">repository</a> to Quickstart on Springboot based Dockerized Microservices.
+
 ## Server, Virtual Machines & Containers
 
 ![Containers](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Servers-VMs-Containers.jpg)
