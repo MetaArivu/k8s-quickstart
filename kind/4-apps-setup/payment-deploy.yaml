@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: payment-container
-        image: metamagic/mock-service
+        image: metamagic/mock-payment
         # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:

@@ -3,13 +3,13 @@
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: tc9-hpa
+  name: order-hpa
   namespace: lambda
 spec:
   scaleTargetRef:
     apiVersion:  apps/v1beta2
     kind: Deployment
-    name: tc-deploy
+    name: order-deploy
   # Min Replica will overwrite Deployment replicas with
   # if minReplicas > replicas (in Deployment)
   # For Ex. tc10-deply.yaml replicas = 2

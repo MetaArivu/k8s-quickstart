@@ -4,17 +4,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tc9-deploy
+  name: order-deploy
   namespace: lambda
   labels:
-    app: tc9-deploy
+    app: order-deploy
 spec:
   replicas: 2
   selector:
     matchLabels:
       # Matching the labels from Pod Meta Data
       # Multiple labels can be used
-      app: tc9-pod
+      app: order-pod
   minReadySeconds: 5
   strategy:
     # Re-Create / Rolling Update
@@ -25,14 +25,14 @@ spec:
   template:
     metadata:
       labels:
-        app: tc9-pod
+        app: order-pod
         version: "9.0.10"
         release: stable
         organization: Apache
     spec:
       containers:
-      - name: tc9-container
-        image: metamagic/tomcat:9
+      - name: order-container
+        image: metamagic/mock-order
         # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
