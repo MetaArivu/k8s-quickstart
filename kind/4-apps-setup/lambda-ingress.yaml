@@ -8,7 +8,7 @@ metadata:
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/service-upstream: "true"
+    #nginx.ingress.kubernetes.io/service-upstream: "true"
     ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:

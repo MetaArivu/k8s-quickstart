@@ -1,11 +1,21 @@
 # Kubernetes Workshop
 
-Aug 6, 2021
-
 - Docker Containers (20.10)
 - Kind (0.11)
 - Kubernetes (1.21)
 - Istio (1.10x)
+
+##  Getting Started
+
+Please click <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind">here</a> for getting started with Docker, KinD, Kubernetes installation and Demo Apps.
+
+## New Apps Added in Kind section
+
+### Updates on Aug 13, 2021
+
+1. Chapter 4 - Lambda App (nothing to do with Amazon Lambda) with Spring Boot Apps (Cart, Order, Payment)
+2. Checkout the <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind">Kind directory</a> for the details.
+3. For Docker, Kind, Kubectl command short cuts checkout the bash_profile file.
 
 ## Server, Virtual Machines & Containers
 
