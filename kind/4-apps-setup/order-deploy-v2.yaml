@@ -28,7 +28,7 @@ spec:
         app: order-pod
         version: "1.2.0"
         release: stable
-        organization: Apache
+        organization: MetaArivu
     spec:
       containers:
       - name: order-container
@@ -38,11 +38,14 @@ spec:
         ports:
         - containerPort: 9090
         resources:
-        # QoS : Burstable
+        # QoS : Guranteed
+        # Pod will not be launched if the Hardware 
+        # resources are not available
+        # To check, Run the command kubectl describe pods pod-name
           limits:
             cpu: 500m
-            memory: 128Mi
+            memory: 512Mi
           requests:
-            cpu: 256m
-            memory: 64Mi
+            cpu: 500m
+            memory: 512Mi
 

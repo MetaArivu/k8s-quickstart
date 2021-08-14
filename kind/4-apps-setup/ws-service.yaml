@@ -8,9 +8,12 @@ metadata:
   labels:
     app: ws-service
 spec:
+  # Type Cluster IP, Load Balancer, Node Port etc.
+  # Cluster IP Automatically assigned by Kubernetes
   type: ClusterIP
   ports:
   - port: 80
+    # Port Exposed by the Container
     targetPort: 80
     protocol: TCP
     name: http

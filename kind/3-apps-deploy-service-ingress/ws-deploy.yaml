@@ -30,5 +30,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        # QoS : Best Effort
+        # Pod will not be launched if the Hardware 
+        # resources are not available
+        # To check, Run the command kubectl describe pods pod-name
 
 

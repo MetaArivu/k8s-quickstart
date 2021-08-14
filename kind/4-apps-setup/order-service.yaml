@@ -9,9 +9,12 @@ metadata:
   labels:
     app: order-service
 spec:
+  # Type Cluster IP, Load Balancer, Node Port etc.
+  # Cluster IP Automatically assigned by Kubernetes
   type: ClusterIP
   ports:
   - port: 80
+    # Port Exposed by the Container
     targetPort: 9090
     protocol: TCP
     name: http
@@ -20,4 +23,4 @@ spec:
     # Ex. Order Service Instances
     app: order-pod
     release: stable
-    organization: Apache
+    organization: MetaArivu

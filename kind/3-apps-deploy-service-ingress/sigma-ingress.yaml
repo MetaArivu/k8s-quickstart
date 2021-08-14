@@ -25,7 +25,7 @@ spec:
            port:
              number: 80
       - path: /tomcat8
-        pathType: Exact
+        pathType: Prefix
         backend:
           service:
           # Service 1: Product Service
@@ -33,7 +33,7 @@ spec:
            port:
              number: 80
       - path: /tomcat9
-        pathType: Exact
+        pathType: Prefix
         backend:
           service:
           # Service 2: Shopping Cart Service
@@ -41,7 +41,7 @@ spec:
            port:
              number: 80
       - path: /tomcat10
-        pathType: Exact
+        pathType: Prefix
         backend:
           service:
           # Service 3: Order Service

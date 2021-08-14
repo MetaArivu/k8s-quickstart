@@ -1,4 +1,3 @@
-
 # App Server for the Microservice
 # Deployment / Replicaset / Pod
 apiVersion: apps/v1
@@ -28,7 +27,7 @@ spec:
         app: order-pod
         version: "1.0.0"
         release: stable
-        organization: Apache
+        organization: MetaArivu
     spec:
       containers:
       - name: order-container
@@ -38,10 +37,13 @@ spec:
         ports:
         - containerPort: 9090
         resources:
-        # QoS : Burstable
+        # QoS : Guranteed
+        # Pod will not be launched if the Hardware 
+        # resources are not available
+        # To check, Run the command kubectl describe pods pod-name
           limits:
-            cpu: 756m
-            memory: 756Mi
+            cpu: 500m
+            memory: 512Mi
           requests:
             cpu: 500m
             memory: 512Mi

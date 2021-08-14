@@ -27,6 +27,7 @@ spec:
         # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
+        # Port Exposed by the Container
         - containerPort: 8080
         resources:
         # QoS : Burstable

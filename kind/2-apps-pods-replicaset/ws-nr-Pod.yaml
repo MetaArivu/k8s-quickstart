@@ -17,7 +17,7 @@ spec:
     # Use Always ONLY for Development purpose.
     imagePullPolicy: Always
     ports:
-    # Port of your application Defined in the Container
+    # Port Exposed by the Container
     - containerPort: 80
     resources:
     # QoS : Burstable

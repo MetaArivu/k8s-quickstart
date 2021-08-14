@@ -39,8 +39,8 @@ spec:
         resources:
         # QoS Guranteed
         # Pod will not be launched if the Hardware 
-        # resource is not available
-        # To check the run the command kubectl describe pod pod-name
+        # resources are not available
+        # To check, Run the command kubectl describe pods pod-name
           limits:
             cpu: 500m
             memory: 256Mi
