@@ -54,19 +54,35 @@ These services will be updated with more functionality by end of Aug 2021.
 
 ![Shopping Portal](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/K8s-Demo-1.jpg)
 
-## KinD Docker Images - Sofware (sw)
+## Docker Images - Sofware <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/docker">(docker)</a> for running Application
 
 - alpine-base
 - apache
 - echo
-- java
+- java (8)
+- node
 - podshell
-- tomcat
+- tomcat (8,9 & 10)
 
 ## KinD Clusters
 
 - Clusters (Contain Cluster Configurations)
-- Apps (Demo Service Infra Code)
+- Apps (Demo Service Infra Code) are created chapter wise based to demonstrate various Kubernetes features.
+
+## Kubernetes Chapters
+
+1. Namespace, Pods, ReplicaSet, Service, Ingress
+2. Deployment, ReplicaSet, Service, Ingress, Auto Pod Scaling
+3. Secrets, ConfigMap, Enviroment, PodPresets
+4. Advanced Pod Features
+5. Volumes
+6. Network Policies
+
+## Service Mesh -Istio Chapters
+
+7. coming soon.
+
+## Short Cuts for Docker, KinD, Kubernetes and Git
 
 <a href="https://github.com/MetaArivu/k8s-workshop/blob/master/bash_profile">bash_profile</a> contains shortcuts to various commmands for
 
