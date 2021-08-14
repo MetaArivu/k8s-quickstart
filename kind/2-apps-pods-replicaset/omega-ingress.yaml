@@ -5,12 +5,6 @@ kind: Ingress
 metadata:
   name: omega-gw-ingress
   namespace: omega
-  # Enable these annotations as per the requirement
-  # annotations:
-    # ingress.kubernetes.io/ssl-redirect: "false"
-    # nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    # ingress.kubernetes.io/rewrite-target: /
-    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   # Add TLS 
   rules:
