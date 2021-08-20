@@ -5,6 +5,13 @@ kind: Ingress
 metadata:
   name: lambda-gw-ingress
   namespace: lambda
+  # Enable these annotations as per the requirement
+  # annotations:
+    # ingress.kubernetes.io/ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/service-upstream: "true"
+    # ingress.kubernetes.io/rewrite-target: /
+    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   # Add TLS 
   rules:
@@ -34,7 +41,7 @@ spec:
            name: order-service
            port:
              number: 80
-      - path: /api/v1/payment/
+      - path: /api/v1/payments/
         pathType: Prefix
         backend:
           service:
