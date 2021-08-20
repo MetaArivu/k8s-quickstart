@@ -7,7 +7,7 @@ kubectl delete  --filename 4-apps-setup/ws-deploy.yaml
 kubectl delete  --filename 4-apps-setup/ws-service.yaml
 kubectl delete  --filename 4-apps-setup/cart-deploy.yaml
 kubectl delete  --filename 4-apps-setup/cart-service.yaml
-kubectl delete  --filename 4-apps-setup/order-deploy-v1.yaml --record
+kubectl delete  --filename 4-apps-setup/order-deploy-v1.yaml 
 kubectl delete  --filename 4-apps-setup/order-service.yaml
 kubectl delete  --filename 4-apps-setup/order-hpa.yaml
 kubectl delete  --filename 4-apps-setup/payment-deploy.yaml
