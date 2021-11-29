@@ -11,9 +11,9 @@ Please click <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind
 
 ## New Apps Added in Kind section
 
-### Updates on Aug 13, 2021
+### Updates on Nov 29, 2021
 
-1. Chapter 4 - Lambda App (nothing to do with Amazon Lambda) with Spring Boot Apps (Cart, Order, Payment)
+1. Chapter 5 - Kappa App with Spring Boot Apps (Cart, Order, Payment)
 2. Checkout the <a href="https://github.com/MetaArivu/k8s-workshop/tree/master/kind">Kind directory</a> for the details.
 3. For Docker, Kind, Kubectl command short cuts checkout the <a href="https://github.com/MetaArivu/k8s-workshop/blob/master/bash_profile">bash_profile</a> file.
 
