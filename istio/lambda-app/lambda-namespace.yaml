@@ -1,7 +1,0 @@
-# Namespace Definition for Lambda
-# Istio Injection Enabled
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: lambda
-  istio-injection: enabled
