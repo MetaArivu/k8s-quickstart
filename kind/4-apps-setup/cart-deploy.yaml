@@ -22,12 +22,13 @@ spec:
       maxUnavailable: 1
       maxSurge: 1
   template:
+    # Pod Meta Data
     metadata:
       labels:
         app: cart-pod
         version: "1.0.0"
         release: stable
-        organization: Apache
+        organization: MetaArivu
     spec:
       containers:
       - name: cart-container
@@ -35,7 +36,8 @@ spec:
         # Use Always ONLY for Development purpose.
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 9090
+        - name: cart-port
+          containerPort: 9090
         resources:
         # QoS : Burstable
         # Pod will not be launched if the Hardware 

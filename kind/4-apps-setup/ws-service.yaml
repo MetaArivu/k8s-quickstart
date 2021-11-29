@@ -19,3 +19,5 @@ spec:
     name: http
   selector:
     app: ws-pod
+    release: stable
+    organization: MetaArivu

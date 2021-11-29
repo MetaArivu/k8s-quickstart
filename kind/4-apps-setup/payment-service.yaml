@@ -22,3 +22,5 @@ spec:
     # Instance Labels
     # Ex. Payment Service Instances
     app: payment-pod
+    release: stable
+    organization: MetaArivu

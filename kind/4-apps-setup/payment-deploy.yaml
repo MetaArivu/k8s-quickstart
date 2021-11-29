@@ -27,7 +27,7 @@ spec:
         app: payment-pod
         version: "1.0.0"
         release: stable
-        organization: Apache
+        organization: MetaArivu
     spec:
       containers:
       - name: payment-container

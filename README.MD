@@ -35,12 +35,17 @@ Mock Services built using Microservices Template Code base. These services have 
 1. <a href="https://github.com/MetaArivu/mock-cart">Cart Service</a>
 2. <a href="https://github.com/MetaArivu/mock-order">Order Service</a>
 3. <a href="https://github.com/MetaArivu/mock-payment">Payment Service</a>
+4. <a href="https://github.com/MetaArivu/mock-product">Product Service</a>
 
 These services will be updated with more functionality by end of Aug 2021.
 
 ## Server, Virtual Machines & Containers
 
 ![Containers](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/Servers-VMs-Containers.jpg)
+
+##  How Docker Works?
+
+![Docker](https://raw.githubusercontent.com/MetaArivu/k8s-workshop/master/diagrams/How-Docker-Works.png)
 
 ## Kubernetes Architcture
 
@@ -63,6 +68,10 @@ These services will be updated with more functionality by end of Aug 2021.
 - node
 - podshell
 - tomcat (8,9 & 10)
+
+## Distroless Container Images
+
+<WIP>
 
 ## KinD Clusters
 

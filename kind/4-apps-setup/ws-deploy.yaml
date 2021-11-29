@@ -12,6 +12,8 @@ spec:
   selector:
     matchLabels:
       app: ws-pod
+      release: stable
+      organization: MetaArivu
   minReadySeconds: 5
   strategy:
     # Re-Create / Rolling Update

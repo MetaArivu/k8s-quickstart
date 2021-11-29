@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Part 2: " 
+echo "Chapter 2: Install Istio & Metrics"
+
+echo "2.1 Install Istio: istioctl install --set profile=demo -y"
+#./istioctl install --set profile=demo -y
+
+kubectl get pods -n istio-system
+
+echo "2.2 Enable Istio Injection"
+kubectl label namespace default istio-injection=enabled
+
+echo "2.3 Install Istio"
+kubectl apply -f setup/install-istio.yaml
+kubectl get pods -n istio-system
+
+echo "2.4 Patch Istio IngressGateway with NodePort"
+kubectl patch service istio-ingressgateway -n istio-system --patch "$(cat setup/patch-ingressgateway-nodeport.yaml)"
+
+# Metrics Server
+echo "2.4 Install Metrics Server"
+
+kubectl config set-context --current --namespace kube-system
+
+#helm repo add stable https://kubernetes-charts.storage.googleapis.com
+#helm repo update
+#helm upgrade metrics-server --install --set "args={--kubelet-insecure-tls, --kubelet-preferred-address-types=InternalIP}" stable/metrics-server --namespace kube-system
+
+echo "2.5 To Install the Apps run the following command"
+echo "$ ch3-sigma-install-apps"

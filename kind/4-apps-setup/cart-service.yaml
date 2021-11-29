@@ -23,4 +23,4 @@ spec:
     # Ex. Cart Service Instances
     app: cart-pod
     release: stable
-    organization: Apache
+    organization: MetaArivu

@@ -10,6 +10,15 @@ metadata:
     app: bb-n-pod
     release: stable
 spec:
+  # Init Containers Will run Before the App Container
+  initContainers:
+  - name: init-myservice
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
+  - name: init-mydb
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
+  # App Container
   containers:
   - name: bb-n-container
     image: busybox:1.28
@@ -24,10 +33,3 @@ spec:
       requests:
         cpu: 75m
         memory: 64Mi
-  initContainers:
-  - name: init-myservice
-    image: busybox:1.28
-    command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
-  - name: init-mydb
-    image: busybox:1.28
-    command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
