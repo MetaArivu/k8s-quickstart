@@ -23,9 +23,10 @@ COPY --chown=poduser:poduser jdk-17_linux-x64_bin.tar.gz /Softwares/
 RUN cd /Softwares && tar -xvf jdk-17_linux-x64_bin.tar.gz && rm jdk-17_linux-x64_bin.tar.gz
 
 ENV JAVA_HOME /Softwares/jdk-17.0.3.1
-RUN export PATH=$PATH:$JAVA_HOME/bin
+ENV PATH $PATH:$JAVA_HOME/bin
+ENV JDK_JAVA_OPTIONS "--add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED"
 
 # Run the Container as poduser
-USER poduser
+#USER poduser
 
 ENTRYPOINT /bin/bash
