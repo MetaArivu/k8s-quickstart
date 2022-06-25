@@ -30,9 +30,9 @@ ADD .bashrc /home/poduser/
 RUN chown poduser:poduser /home/poduser/.bashrc
 RUN chown poduser:poduser /Softwares
 
-WORKDIR /home/arivu
+WORKDIR /home/poduser
 
 # Run the Container as poduser
 USER poduser
 
-ENTRYPOINT /bin/bash
+CMD /bin/bash
