@@ -16,7 +16,7 @@ LABEL Araf Karsh Hamid <araf.karsh@metamagic.in>
 RUN mkdir /Softwares/tomcat/
 
 # Copy Tomcat (Install)
-COPY --chown=arivu:arivu tc10 /Softwares/tomcat/
+COPY --chown=poduser:poduser tc10 /Softwares/tomcat/
 RUN chmod 750 /Softwares/tomcat/bin/*
 
 # COPY your web app /Softwares/tomcat/webapps

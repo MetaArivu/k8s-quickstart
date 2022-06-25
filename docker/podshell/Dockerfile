@@ -14,7 +14,7 @@ FROM metamagic/alpine:latest
 MAINTAINER Araf Karsh Hamid <araf.karsh@metamagic.in>
 
 # Copy Updated bashrc file
-COPY --chown=arivu:arivu .bashrc /home/arivu/
+COPY --chown=poduser:poduser .bashrc /home/poduser/
 
 ##
 RUN apk --update add openssh nmap nmap-scripts curl tcpdump bind-tools jq nmap-ncat
@@ -24,6 +24,6 @@ RUN apk update && apk add wget && apk add vim && apk add nano
 RUN apk add nuttcp 
 #RUN apk add nutperf && apk add nuttcp 
 
-USER arivu
+USER poduser
 
 ENTRYPOINT /bin/bash

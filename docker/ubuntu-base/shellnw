@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "docker container run -it --rm metamagic/ubuntu ip address"
+docker container run -it --rm metamagic/ubuntu ip address
+echo
+echo "docker container run -it --rm --net=none metamagic/ubuntu ip address"
+docker container run -it --rm --net=none metamagic/ubuntu ip address
+echo
+echo "docker container run -it --rm --net=host metamagic/ubuntu ip address"
+docker container run -it --rm --net=host metamagic/ubuntu ip address

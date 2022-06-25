@@ -12,7 +12,7 @@ FROM metamagic/alpine:latest
 
 LABEL author="Araf Karsh Hamid <araf.karsh@metamagic.in>"
 
-RUN apk add --no-cache apache2 && \
+RUN apk add --no-cache apache2 iptables knock && \
            mkdir -p /run/apache2 
 
 # Copy Starting page for Apache 2

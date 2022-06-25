@@ -16,7 +16,7 @@ LABEL Araf Karsh Hamid <araf.karsh@metamagic.in>
 RUN mkdir /Softwares/tomcat/
 
 # Copy Tomcat (Install)
-COPY --chown=arivu:arivu tc8 /Softwares/tomcat/
+COPY --chown=poduser:poduser tc8 /Softwares/tomcat/
 RUN chmod 750 /Softwares/tomcat/bin/*
 
 # Expose Tomcat port

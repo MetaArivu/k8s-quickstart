@@ -15,4 +15,6 @@ kubectl delete  --filename 5-apps-init-live-ready-qos/payment-service.yaml
 kubectl delete  --filename 5-apps-init-live-ready-qos/kappa-ingress.yaml
 kubectl delete  --filename 5-apps-init-live-ready-qos/kappa-namespace.yaml
 
+echo "5.2 Switch the Namespace to default"
+kubectl config set-context $(kubectl config current-context) --namespace=default
 

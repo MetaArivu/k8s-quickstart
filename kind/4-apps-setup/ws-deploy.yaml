@@ -25,6 +25,8 @@ spec:
     metadata:
       labels:
         app: ws-pod
+        release: stable
+        organization: MetaArivu
     spec:
       containers:
       - name: ws-container

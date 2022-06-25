@@ -24,15 +24,15 @@ RUN mkdir -p /Softwares
 RUN chmod -R 750 /Softwares
 
 # Add user
-RUN adduser -D -u 2048 -s /bin/bash arivu
+RUN adduser -D -u 2048 -s /bin/bash poduser
 
-ADD .bashrc /home/arivu/
-RUN chown arivu:arivu /home/arivu/.bashrc
-RUN chown arivu:arivu /Softwares
+ADD .bashrc /home/poduser/
+RUN chown poduser:poduser /home/poduser/.bashrc
+RUN chown poduser:poduser /Softwares
 
 WORKDIR /home/arivu
 
-# Run the Container as arivu
-USER arivu
+# Run the Container as poduser
+USER poduser
 
 ENTRYPOINT /bin/bash

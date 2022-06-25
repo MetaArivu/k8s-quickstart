@@ -20,19 +20,19 @@ RUN mkdir -p /Softwares
 RUN chmod -R 750 /Softwares
 
 # Add user
-RUN adduser -D -u 2048 -s /bin/bash arivu
+RUN adduser -D -u 2048 -s /bin/bash poduser
 
-COPY --chown=arivu:arivu .bashrc /home/arivu/
+COPY --chown=poduser:poduser .bashrc /home/poduser/
 
-RUN chown arivu:arivu /Softwares
-RUN chown arivu:arivu /home/arivu/
+RUN chown poduser:poduser /Softwares
+RUN chown poduser:poduser /home/poduser/
 
-WORKDIR /home/arivu
+WORKDIR /home/poduser
 
 RUN apk update && apk add wget && apk add curl && apk add nano
 RUN npm install -g newman
 
-# Run the Container as arivu only for SW Containers
-USER arivu
+# Run the Container as poduser only for SW Containers
+USER poduser
 
 ENTRYPOINT /bin/bash

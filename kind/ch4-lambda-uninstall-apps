@@ -15,3 +15,5 @@ kubectl delete  --filename 4-apps-setup/payment-service.yaml
 kubectl delete  --filename 4-apps-setup/lambda-ingress.yaml
 kubectl delete  --filename 4-apps-setup/lambda-namespace.yaml
 
+echo "4.2 Switch the Namespace to default"
+kubectl config set-context $(kubectl config current-context) --namespace=default
